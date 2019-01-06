@@ -1,6 +1,9 @@
-<?php 
+<?php
 
+//include_once("../Controllers/ArticlesController.php");
 
+$concategory = new CategoriesController();
+$categories = $concategory->create();
 
 
 ?>
@@ -15,32 +18,21 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <title>Edit</title>
+    <title>Create</title>
   </head>
   <body>
-    <h1>Edit your todo</h1>
 
-    <form>
-    	<div class="container">
-  <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Title</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputEmail3" placeholder="task's title">
-    </div>
+    <div class="container">
+         <h1>Hello admin! Let's create a category!</h1>
+
+    <form method="post" action="create">
+  <div class="form-group">
+    <label>Category's title</label>
+    <input type="text" name = "category_name" class="form-control" id="category_name" placeholder="Category's title" required>
   </div>
-  <div class="form-group row">
-    <label class="col-sm-2 col-form-label">Description</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" placeholder="task's description">
-    </div>
-  </div>
-  <fieldset class="form-group">
-    </div>
-  </fieldset>
-  <div class="form-group row">
-    <div class="col-sm-10">
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
+
+<br>
+    <button type="submit" id="submit" class="btn btn-outline-info">Yeaah let's create this new category!</button>
   </div>
 </form>
 </div>
@@ -51,3 +43,5 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </body>
 </html>
+
+

@@ -1,5 +1,7 @@
 <?php
 
+//dossier Config
+
 //fichier qui contient uniquement des fonctions pr manager la db
 class connect_DB
 {
